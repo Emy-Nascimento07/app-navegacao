@@ -1,5 +1,5 @@
 import { useRouter } from "expo-router";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 export default function Sobre() {
   const router = useRouter();
   return (
@@ -11,12 +11,7 @@ export default function Sobre() {
         comecei a aplicar na prática conceitos como criação de interfaces,
         navegação entre telas e organização de componentes.
       </Text>
-      <Image
-        style={styles.image}
-        source={{
-          uri: "https://i.pinimg.com/1200x/45/ec/59/45ec59c754dd7b35bad053c2aee62141.jpg",
-        }}
-      />
+
       <TouchableOpacity style={styles.button} onPress={() => router.back()}>
         <Text style={styles.buttonText}>Voltar</Text>
       </TouchableOpacity>
@@ -59,11 +54,5 @@ const styles = StyleSheet.create({
     color: "#f8ecff",
     fontSize: 15,
     fontWeight: 600,
-  },
-
-  image: {
-    width: 100,
-    height: 100,
-    marginBottom: 20,
   },
 });

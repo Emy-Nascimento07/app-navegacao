@@ -6,16 +6,28 @@ export default function Detalhes() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Tela de Detalhes</Text>
-      <Image
-        style={styles.image}
-        source={{
-          uri: "https://conceitouno.wordpress.com/wp-content/uploads/2015/10/festival1.jpg",
-        }}
-      />
+      <View style={styles.containerImagem}>
+        <Image
+          style={styles.image}
+          source={{
+            uri: "https://i.pinimg.com/736x/a9/b4/ab/a9b4ab5d0a026347ba9ab5ba543a9e5d.jpg",
+          }}
+        />
+        <Image
+          style={styles.image}
+          source={{
+            uri: "https://i.pinimg.com/1200x/b1/09/5e/b1095ef8e31648f495e64381a31077c2.jpg",
+          }}
+        />
+        <Image
+          style={styles.image}
+          source={{
+            uri: "https://i.pinimg.com/1200x/45/ec/59/45ec59c754dd7b35bad053c2aee62141.jpg",
+          }}
+        />
+      </View>
 
-      <Text style={styles.description}>
-        Aqui você pode adicionar mais informações
-      </Text>
+      <Text style={styles.description}>Aprecie os doguinhos acima.</Text>
 
       <TouchableOpacity style={styles.button} onPress={() => router.back()}>
         <Text style={styles.buttonText}>Voltar</Text>
@@ -65,6 +77,12 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     marginBottom: 20,
+    margin: 10,
+  },
+
+  containerImagem: {
+    flexDirection: "row",
+    justifyContent: "space-around",
   },
 
   description: {
