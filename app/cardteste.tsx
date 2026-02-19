@@ -1,6 +1,6 @@
 import { useRouter } from "expo-router";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { Card } from "../components/card";
+import { Card } from "../components/Card";
 export default function CardTeste() {
   const router = useRouter();
   return (
@@ -29,6 +29,7 @@ export default function CardTeste() {
 const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
+
     alignItems: "center",
     flex: 1,
     padding: 16,

@@ -1,10 +1,17 @@
+import Button from "@/components/Button";
+import ProgressBar from "@/components/ProgressBar";
 import { useRouter } from "expo-router";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { ScrollView, StyleSheet, Text, TouchableOpacity } from "react-native";
 
 export default function Home() {
   const router = useRouter();
+
+  const handlePress = () => {
+    console.log("Botão clicado!");
+  };
+
   return (
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.title}>Bem vindo ao React Native!</Text>
       <Text style={styles.subtitle}>Esta é a tela inicial do nosso app.</Text>
 
@@ -28,7 +35,18 @@ export default function Home() {
       >
         <Text style={styles.buttonText}>Ir para o card teste</Text>
       </TouchableOpacity>
-    </View>
+
+      <Button title="Salvar" onPress={handlePress} />
+      <Button
+        title="Confirmar presença"
+        onPress={handlePress}
+        color="#34c759"
+      />
+      <Button title="Cancelar" onPress={handlePress} color="#ff3b30" />
+
+      <ProgressBar number={20} />
+      <ProgressBar number={75} />
+    </ScrollView>
   );
 }
 
@@ -39,6 +57,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 16,
     backgroundColor: "#efe3fb",
+    gap: 4,
   },
 
   title: {
