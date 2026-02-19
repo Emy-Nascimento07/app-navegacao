@@ -7,17 +7,26 @@ export default function Home() {
     <View style={styles.container}>
       <Text style={styles.title}>Bem vindo ao React Native!</Text>
       <Text style={styles.subtitle}>Esta é a tela inicial do nosso app.</Text>
+
       <TouchableOpacity
         style={styles.button}
         onPress={() => router.push("/detalhes")}
       >
         <Text style={styles.buttonText}>Ir para detalhes</Text>
       </TouchableOpacity>
+
       <TouchableOpacity
         style={styles.button}
         onPress={() => router.push("/sobre")}
       >
         <Text style={styles.buttonText}>Ir para sobre o app</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => router.push("/cardteste")}
+      >
+        <Text style={styles.buttonText}>Ir para o card teste</Text>
       </TouchableOpacity>
     </View>
   );
